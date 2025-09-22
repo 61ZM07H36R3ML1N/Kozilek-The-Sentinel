@@ -1,3 +1,5 @@
 pymongo
 pandas
 scikit-learn
+google-genai
+python-dotenv
