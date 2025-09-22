@@ -11,6 +11,8 @@ const MONGO_URI = process.env.MONGO_URI;
 const DATABASE_NAME = 'titans_eye';
 const USERS_COLLECTION = 'users';
 const RULES_COLLECTION = 'rules';
+const verificationChannelId = process.env.VERIFICATION_CHANNEL_ID; // Add this to your .env
+const verifiedRoleId = process.env.VERIFIED_ROLE_ID; // Add this to your .env
 
 // --- Discord Client Setup ---
 const client = new Client({
@@ -40,8 +42,6 @@ async function connectToDatabase() {
 
 // --- Rule-Based Verification Logic ---
 let activeRules = [];
-const verificationChannelId = 'YOUR_VERIFICATION_CHANNEL_ID_HERE'; // Replace with your channel ID
-const verifiedRoleId = 'YOUR_VERIFIED_ROLE_ID_HERE'; // Replace with your role ID
 
 async function loadRules() {
   if (!db) return;
