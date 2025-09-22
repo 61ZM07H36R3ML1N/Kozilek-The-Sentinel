@@ -1,0 +1,21 @@
+# GitHub issue template configuration for Kozilek-The-Sentinel
+# Disables creating blank issues and provides quick contact links
+
+blank_issues_enabled: false
+
+contact_links:
+  - name: 'Bug report'
+    about: 'Report a bug with reproduction steps, expected vs actual behavior, and environment details.'
+    url: 'https://github.com/61ZM07H36R3ML1N/Kozilek-The-Sentinel/issues/new?assignees=&labels=bug&template=bug_report.md'
+
+  - name: 'Feature request'
+    about: 'Suggest a new feature or enhancement. Give a short description and motivation.'
+    url: 'https://github.com/61ZM07H36R3ML1N/Kozilek-The-Sentinel/issues/new?assignees=&labels=enhancement&template=feature_request.md'
+
+  - name: 'General / Contributing'
+    about: 'Questions about contributing, design decisions, or usage. Please read CONTRIBUTING.md first.'
+    url: 'https://github.com/61ZM07H36R3ML1N/Kozilek-The-Sentinel/blob/main/CONTRIBUTING.md'
+
+  - name: 'Security'
+    about: "Report security vulnerabilities privately following the project's security policy."
+    url: 'https://github.com/61ZM07H36R3ML1N/Kozilek-The-Sentinel/security/policy'
