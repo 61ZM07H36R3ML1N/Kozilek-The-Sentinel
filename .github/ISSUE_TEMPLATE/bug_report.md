@@ -1,6 +1,6 @@
 # Bug Report Template
 
-name: "🐛 Bug Report" about: Report a bug or unexpected behavior in Kozilek, The Sentinel. title: "[Bug]: " labels: ["bug", "needs triage"] assignees: ''
+🐛 Report a bug or unexpected behavior in Kozilek, The Sentinel. title: "[Bug]: " labels: ["bug", "needs triage"] assignees: ''
 🐛 Describe the bug
 A clear and concise description of what the bug is.
 
