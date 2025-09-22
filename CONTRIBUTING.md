@@ -10,7 +10,7 @@ By participating in this project, you are expected to uphold our [Code of Conduc
 
 There are many ways to contribute to this project:
 
-- **Report Bugs:** If you find a bug, please check the [Issues](LINK_TO_ISSUES) to see if it has already been reported. If not, open a new issue and provide as much detail as possible to help us reproduce it.
+- **Report Bugs:** If you find a bug, please check the [Issues](https://github.com/61ZM07H36R3ML1N/Kozilek-The-Sentinel/blob/dd2f8db133e1bdf87e40df79a91941c570f564cf/.github/ISSUE_TEMPLATE/bug_report.md) to see if it has already been reported. If not, open a new issue and provide as much detail as possible to help us reproduce it.
 - **Propose New Features:** Have an idea for a new feature or improvement? Open an issue to discuss it before you start writing code.
 - **Contribute Code:** The core of our project is the code. This document outlines the process for making code contributions.
 - **Improve Documentation:** Good documentation is vital. If you find a typo, an unclear section, or a need for a new guide, please open a pull request to fix it.
