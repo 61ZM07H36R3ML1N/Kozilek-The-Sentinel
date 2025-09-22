@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Profanity Filter",
+    "type": "keyword_blacklist",
+    "rule_data": {
+      "keywords": ["hell", "damn", "ass", "bitch"]
+    },
+    "score": 50,
+    "description": "Flags messages containing a list of common profanity words."
+  },
+  {
+    "name": "Age Declaration Check",
+    "type": "date_check",
+    "rule_data": {
+      "keywords": ["born on", "date of birth", "dob", "i was born"],
+      "min_age": 18
+    },
+    "score": 100,
+    "description": "Flags messages that appear to be a date of birth and checks if the age is below the minimum."
+  },
+  {
+    "name": "Response Length Check",
+    "type": "length_check",
+    "rule_data": {
+      "standard_user": {
+        "min_length": 10,
+        "max_length": 2000
+      },
+      "nitro_user": {
+        "min_length": 10,
+        "max_length": 4000
+      }
+    },
+    "score": 25,
+    "description": "Flags messages that are too short or unusually long based on a user's Nitro status."
+  },
+  {
+    "name": "Bot Signature Detection",
+    "type": "keyword_blacklist",
+    "rule_data": {
+      "keywords": [
+        "am not a bot",
+        "i am a human",
+        "verifying my age",
+        "i confirm"
+      ]
+    },
+    "score": 80,
+    "description": "Flags messages containing phrases commonly used by bots to bypass verification."
+  }
+]
