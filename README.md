@@ -57,10 +57,10 @@ Kozilek uses Discord's built-in slash commands for ease of use.
 
 Kozilek is built with a modern, powerful tech stack to ensure reliability and performance.
 
-- **Backend**: Node.js
+- **Backend**: [Node.js](https://nodejs.org/)
 - **Discord API Wrapper**: [discord.js](https://github.com/Rapptz/discord.js)
 - **Machine Learning**: [Vertex AI](https://cloud.google.com/vertex-ai)
-- **Database**: MongoDB Atlas
+- **Database**: [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
 - **Hosting**: [DigitalOcean](https://www.digitalocean.com/) / [Google Cloud Platform](https://cloud.google.com/)
 
 ---
