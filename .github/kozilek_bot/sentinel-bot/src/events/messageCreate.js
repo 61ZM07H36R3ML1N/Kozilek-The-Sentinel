@@ -5,6 +5,7 @@ const { Events, PermissionFlagsBits, EmbedBuilder } = require('discord.js');
 const axios = require('axios');
 const dotenv = require('dotenv');
 const path = require('path');
+const { getMaxCharacterLimit } = require('../utils/userUtils');
 
 // --- 1. CONFIGURE ENVIRONMENT VARIABLES ---
 // Load secrets from the .env file at the project's root directory.
@@ -32,6 +33,22 @@ module.exports = {
     // Ignore messages from bots to prevent feedback loops.
     if (message.author.bot) return;
 
+    //Get the user and member objects from the message
+    const user = message.author;
+    const member = message.member;
+
+    // Check if the message exceeds the user's character limit
+    const userMaxChars = getMaxCharacterLimit(user, member);
+
+    console.log(
+      `[INFO] User ${user.tag} has a max character limit of ${userMaxChars}. Message length: ${message.content.length}`,
+    );
+
+    if (message.content.length > 2000 && userMaxChars === 2000) {
+      console.log(
+        `[WARN] Received a message longer than 2000 characters from a non-Nitro user. This is unusual`,
+      );
+    }
     // Ignore messages from users with moderator permissions (e.g., Manage Messages).
     if (
       message.member &&
