@@ -1,0 +1,17 @@
+{
+  "sentinelEngine": {
+    "confidenceThreshold": 0.8,
+    "minMessageLength": 15
+  },
+  "moderation": {
+    "bypassPermission": "ManageMessages",
+    "logChannelEnvironmentVariable": "MOD_LOG_CHANNEL_ID"
+  },
+  "behavior": {
+    "logApiConnectionErrors": false
+  },
+  "disabled": {
+    "events": [],
+    "commands": []
+  }
+}
