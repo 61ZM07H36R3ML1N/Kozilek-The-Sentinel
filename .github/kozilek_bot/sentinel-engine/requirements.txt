@@ -1,0 +1,8 @@
+tensorflow-macos
+tensorflow-metal
+flask
+python-dotenv
+gunicorn
+numpy
+pandas
+scikit-learn
