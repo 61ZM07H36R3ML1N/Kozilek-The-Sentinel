@@ -24,6 +24,23 @@ const client = new Client({
 // --- 3. DYNAMIC COMMAND HANDLING ---
 client.commands = new Collection();
 
+// --- NEW: DYNAMIC EVENT HANDLING ---
+const eventsPath = path.join(__dirname, 'src', 'events');
+const eventFiles = fs
+  .readdirSync(eventsPath)
+  .filter(file => file.endsWith('.js'));
+
+for (const file of eventFiles) {
+  const filePath = path.join(eventsPath, file);
+  const event = require(filePath);
+  if (event.once) {
+    client.once(event.name, (...args) => event.execute(...args));
+  } else {
+    client.on(event.name, (...args) => event.execute(...args));
+  }
+  console.log(`[INFO] Loaded event: ${event.name}`);
+}
+
 // Define the path to your commands directory, which is now inside 'src'.
 const commandsPath = path.join(__dirname, 'src', 'commands');
 
